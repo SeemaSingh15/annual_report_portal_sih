@@ -28,12 +28,12 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Admin" element={<Admin />} />
-            <Route path="/Report" element={<Report />} />
-            <Route path="/ReportView" element={<ReportView />} />
-            <Route path="/UserDashboard" element={<UserDashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/report" element={<Report />} />
+            <Route path="/reportview" element={<ReportView />} />
+            <Route path="/userdashboard" element={<UserDashboard />} />
             {/* Add more routes if needed */}
           </Routes>
         </div>
