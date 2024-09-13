@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import './Register.css';
 
-function Login() {
+function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add authentication logic here
-    if (username && password) {
-      navigate('/dashboard');
+    // Add registration logic here
+    if (username && password === confirmPassword) {
+      navigate('/login');
     }
   };
 
   return (
-    <div className="login-page">
-      <div className="login-box">
-        <h2>Login</h2>
+    <div className="register-page">
+      <div className="register-box">
+        <h2>Register</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username:</label>
@@ -42,14 +43,25 @@ function Login() {
               required
             />
           </div>
-          <button type="submit">Login</button>
+          <div className="form-group">
+            <label htmlFor="confirm-password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Register</button>
         </form>
-        <div className="register-link">
-          <p>New User? <a href="/register">Register</a></p>
+        <div className="login-link">
+          <p>Already have an account? <a href="/login">Login</a></p>
         </div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Register;

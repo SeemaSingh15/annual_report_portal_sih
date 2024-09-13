@@ -1,31 +1,20 @@
-// src/components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Annual Report Portal</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/reports">Reports</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
-            </li>
-          </ul>
-        </div>
+    <nav className="navbar">
+      <div className="navbar-left">
+        <h1>Annual Report Portal</h1>
+      </div>
+      <div className="navbar-right">
+        <Link to="/">Home</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/report-view">Report View</Link>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

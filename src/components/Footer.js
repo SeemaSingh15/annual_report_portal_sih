@@ -1,18 +1,10 @@
-// src/components/Footer.js
-// src/components/Footer.js
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white py-3">
-      <Container>
-        <Row>
-          <Col className="text-center">
-            <p>&copy; 2024 Annual Report Portal. All Rights Reserved.</p>
-          </Col>
-        </Row>
-      </Container>
+    <footer className="footer">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
     </footer>
   );
 }

@@ -1,13 +1,13 @@
-// src/pages/About.js
 import React from 'react';
+// Use App.css for styles
 
-const About = () => {
+function About() {
   return (
-    <div className="container mt-5">
-      <h2>About Us</h2>
-      <p>This portal provides access to annual reports of various companies.</p>
+    <div className="about">
+      <h1>About the Project</h1>
+      <p>This project is designed to manage and view annual reports.</p>
     </div>
   );
-};
+}
 
 export default About;
