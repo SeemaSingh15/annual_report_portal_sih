@@ -1,13 +1,12 @@
-// src/pages/Home.js
 import React from 'react';
+import './Home.css';
 
-const Home = () => {
+function Home() {
   return (
-    <div className="container mt-5">
-      <h1>Welcome to the Annual Report Portal</h1>
-      <p>Explore the latest annual reports from our collection.</p>
+    <div className="home">
+      <h1>Welcome to Our Website</h1>
     </div>
   );
-};
+}
 
 export default Home;
